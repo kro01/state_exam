@@ -1,0 +1,34 @@
+10 септемви 2019
+зад4
+1 А) заявката вади и продуцентите който нямат нито един филм NULL стойности
+а не бива да ги вади
+вади само филми с без заглавие Голяма грешка
+  не е А
+  Б) заявката вади и продуцентите който нямат нито един филм NULL стойности
+  не е Б
+  В) последния ред where дава грешка
+  не е В
+  Г) збъркано е grop by с order by
+  не е Г
+
+  Грешката в Б е най-малка
+  верния отговор е 
+ SELECT ME.NAME, M.YEAR, COUNT(*) AS CNT 
+FROM MOVIEEXEC ME RIGHT JOIN MOVIE M
+ON ME.CERT = M.PRODUCERC  
+GROUP BY ME.CERT, ME.NAME, M.YEAR
+
+2 
+SELECT name,birthdate
+from moviestar
+where birthdate is not Null
+ORDER by birthdate
+LIMIT 1
+
+това е за mysql
+
+
+SELECT top 1 name,birthdate
+from moviestar
+where birthdate is not Null
+ORDER by birthdate
